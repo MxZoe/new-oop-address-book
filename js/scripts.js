@@ -162,7 +162,8 @@ $(document).ready(function(){
     const inputtedCity = $("input#new-city").val();
     const selectedState = $("select#new-state").val();
     let newAddress = new Address(selectedType, inputtedPhoneNumber, inputtedEmail, inputtedAddress, inputtedAddress2, inputtedCity, selectedState);
-    
+
+  
     
     /*
       for each address in current contact, if address.type = selectedType return an alert stating already contains that type
@@ -171,7 +172,7 @@ $(document).ready(function(){
 
     currentContact.firstName = inputtedFirstName;
     currentContact.lastName = inputtedLastName;
-    currentContact.addAddress(newAddress);
+    
     emptyForm();
   });
 });
