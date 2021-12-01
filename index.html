@@ -15,6 +15,12 @@
         <hr>
         <h2>Add a Contact:</h2>
         <form id="new-contact">
+          <div class="form-group type-select">
+            <label for="personal">Personal</label>
+            <input type="radio" id="personal" value="personal" name="address-type" checked="checked">
+            <label for="business">Business</label>
+            <input type="radio" id="business" value="business" name="address-type">
+          </div>
           <div class="form-group">
             <label for="new-first-name">First Name</label>
             <input type="text"  class="form-control" id="new-first-name">
@@ -105,7 +111,8 @@
               </div>
             </div>
           </div>
-          <button type="submit" class="btn-primary">Add</button>
+          <button type="button" id="addAddress" class="btn-primary">Add</button>
+          <button type="submit" class="btn-primary">Submit</button>
         </form>
         <hr>
         <h2>Contacts:</h2>
@@ -116,12 +123,22 @@
         <div id="show-contact">
           <p>First Name: <span class="first-name"></span></p>
           <p>Last Name: <span class="last-name"></span></p>
+          <p>____________________________________________</p>
+          <p><span class="new-personal">Personsal</span></p>
           <p>Phone Number: <span class="phone-number"></span></p>
           <p>Email: <span class="email"></span></p>
           <p>Address: <span class="address-1"></span></p>
           <p>Address line 2: <span class="address-2"></span></p>
           <p>City: <span class="city"></span></p>
           <p>State: <span class="state"></span></p>
+
+          <p><span class="new-business">Business</span></p>
+          <p>Phone Number: <span class="business-phone-number"></span></p>
+          <p>Email: <span class="business-email"></span></p>
+          <p>Address: <span class="business-address-1"></span></p>
+          <p>Address line 2: <span class="business-address-2"></span></p>
+          <p>City: <span class="business-city"></span></p>
+          <p>State: <span class="business-state"></span></p>
 
 
 
