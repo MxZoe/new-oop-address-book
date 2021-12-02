@@ -1,3 +1,23 @@
 #show-contact{
   display: none;
 }
+
+#name-row{
+  text-align: center;
+  border: 2px solid black;
+}
+
+#typePersonal{
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+
+#typeBusiness{
+  text-align: center;
+  border-bottom: 2px solid black;
+}
+
+#buttons{
+  margin-left: 40%;
+  margin-right: 40%;
+}

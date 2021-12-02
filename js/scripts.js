@@ -108,7 +108,6 @@ function showBusiness(address){
 }
 function showContact(contactID){
   const contact = addressBook.findContact(contactID);
-  //for loop to check conact.addresses[i].type === personal || business
   $("#show-contact").show();
   $(".first-name").html(contact.firstName);
   $(".last-name").html(contact.lastName);
@@ -125,6 +124,13 @@ function showContact(contactID){
   let buttons = $("#buttons");
   buttons.empty();
   buttons.append("<button class='deleteButton' id=" + contact.id + ">Delete</button>");
+}
+
+function containsType(address, type){
+  if(address.type === type){
+    return true;
+  }
+  return false;
 }
 function attachContactListeners(){
   $("ul#contacts").on("click", "li", function(){
@@ -175,17 +181,6 @@ $(document).ready(function(){
     const inputtedCity = $("input#new-city").val();
     const selectedState = $("select#new-state").val();
     let newAddress = new Address(selectedType, inputtedPhoneNumber, inputtedEmail, inputtedAddress, inputtedAddress2, inputtedCity, selectedState);
- /*   let addressArray = currentContact.addresses;
-    if(addressArray.length > 0){
-      addressArray.forEach(function(element){
-        if(element.type === selectedType){
-          alert("You have already added a" + selectedType + "address");
-        } else{
-         
-        }
-      });
-    }
-  */
 
     currentContact.firstName = inputtedFirstName;
     currentContact.lastName = inputtedLastName;
